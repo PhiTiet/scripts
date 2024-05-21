@@ -10,7 +10,7 @@ stop_container() {
 deploy_container() {
     docker rm $app_name >/dev/null 2>&1 || true
     docker run -d --name $app_name -p 8080:8080 $image_name
-    echo 'Application started successfully'
+    echo "$app_name application started successfully"
 }
 
 pull_output=$(docker pull --platform arm64 $image_name 2>&1)
