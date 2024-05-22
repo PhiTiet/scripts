@@ -1,7 +1,7 @@
 #!/bin/bash
 
 app_name="portfolio"
-image_name="phitiet/portfolio:latest"
+image_name="ghcr.io/phitiet/portfolio:latest"
 
 stop_container() {
     docker stop $app_name >/dev/null 2>&1 || true
