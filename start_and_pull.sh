@@ -9,7 +9,7 @@ stop_container() {
 
 deploy_container() {
     docker rm $app_name >/dev/null 2>&1 || true
-    docker run -d --name $app_name -p 8080:8080 $image_name > output.log 2>&1 &
+    docker run -d --name $app_name -p 80:80 $image_name > output.log 2>&1 &
     echo "$app_name application started successfully"
 }
 
