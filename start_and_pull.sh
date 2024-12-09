@@ -13,7 +13,7 @@ deploy_container() {
     echo "$app_name application started successfully"
 }
 
-pull_output=$(docker pull --platform arm64 $image_name 2>&1)
+pull_output=$(docker pull $image_name 2>&1)
 
 if [[ $pull_output == *"Downloaded newer image"* ]]; then
     stop_container
