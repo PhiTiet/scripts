@@ -1,4 +1,4 @@
 #Every day at 11am  start all scripts
-30 14 * * * /home/pi/scripts/start_all.sh
+30 14 * * * /home/phi/server/scripts/start_all.sh
 # every 5 minutes run all docker scripts which will pull and deploy if a new image is available.
-*/5 * * * * /home/pi/docker/start_all.sh
+*/5 * * * * /home/phi/server/docker/start_all.sh
